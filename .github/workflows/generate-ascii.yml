@@ -11,16 +11,16 @@ jobs:
       uses: Actions/Checkout@v4
 
     - name: Install cowsay Program
-       run: sudo apt-get install cowsay -y
+      run: sudo apt-get install cowsay -y
 
-   - name: Generate ASCII Artwork
-      run: cowsay -f dragon " Run for cover, I am a DRAGON..... RAWR" >> dragon.txt
+    -  name: Generate ASCII Artwork
+       run: cowsay -f dragon " Run for cover, I am a DRAGON..... RAWR" >> dragon.txt
       
-  - name: Test File Exists
-     run: grep -i "dragon" dragon.txt
+    -   name: Test File Exists
+        run: grep -i "dragon" dragon.txt
 
-  - name: Read File
-     run: cat dragon.txt
+    -   name: Read File
+        run: cat dragon.txt
 
-  - name: List Repo Files
-     run: ls -ltra
+    -   name: List Repo Files
+        run: ls -ltra
